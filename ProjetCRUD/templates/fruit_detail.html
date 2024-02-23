@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Détails du Fruit</title>
+</head>
+<body>
+    <h1>Détails du Fruit</h1>
+    <p><strong>Nom:</strong> {{ fruit.nom }}</p>
+    <p><strong>couleur:</strong> {{ fruit.couleur }}</p>
+    <p><strong>Description:</strong> {{ fruit.description }}</p>
+    <a href="{% url 'fruit_update' fruit.pk %}">Modifier</a>
+    <a href="{% url 'fruit_delete' fruit.pk %}">Supprimer</a>
+    <a href="{% url 'fruit_list' %}">Retour à la liste des fruits</a>
+</body>
+</html>

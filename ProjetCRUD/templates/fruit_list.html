@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Fruits</title>
+</head>
+<body>
+    <h1>Liste des Fruits</h1>
+    <ul>
+        {% for fruit in fruits %}
+            <li><a href="{% url 'fruit_detail' fruit.pk %}">{{ fruit.nom }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'fruit_create' %}">Ajouter un nouveau fruit</a>
+</body>
+</html>
